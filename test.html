@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body onload="load()">
+        <button onclick="filt(4)">testar</button>
+        <a id="a"></a>
+        <a id="b"></a>
+    </body>
+    <script>
+        var l = [2, 3, 8, 5]
+        function filt(n){
+            var p = l.filter((j) => j == n);
+            if (p == false){
+                a = window.document.getElementById('a')
+                a.innerHTML = `${n}`
+            }
+        }
+    </script>
+</html>
