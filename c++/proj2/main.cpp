@@ -1,24 +1,30 @@
 #include <iostream>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-float calcularMassa(float a, float b){
-	const float mA=321.43;
-	const float mB= 150.72;
+
+void inserir(int a[])
+{
+	int i ;
+	for(i=0; i<3; i++)
+	{
+		printf("\n Digite o valor %d ", i+1);
+		scanf("%d", &a[i]);	
+	}
 	
-	printf("\n 1,2 : 1,0 \t: = %f", (1,2*mB+1*mB));
-	printf("\n 1,4 : 1.0 \t: = %f", (1.4*mA+1*mB));
-	printf("\n 1,0 : 1,6 \t: = %f", (1*mA+1,6*mB));
-	return (a*mA) + (b*mB);
+}
+void imprimir(int b[])
+{
+	int i;
+	for(i=0;i<3;i++){
+		printf("\n numeros[%d] = %d", i+1, (2*b[i]));
+	}
 }
 
 int main(int argc, char** argv) {
-	float a=0, b=0, resultado=0;
-	
-	printf("\n Dígite as massas do elemento A e B:");
-	scanf("%f %f", &a, &b);
-	
-	resultado = calcularMassa(a, b);
-	printf("\n Resultado %f", resultado);
-	
+	int numero[3];
+	printf("\n Preenchendo o vetor: \n");
+	inserir(numero);
+	printf("\n valor final");
+	imprimir(numero); 
 	return 0;
 }
